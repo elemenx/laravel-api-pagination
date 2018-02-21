@@ -2,6 +2,11 @@
 
 Inspired By Illuminate Pagination, This Package Used For Api Pagination (by limit/offset)
 
+
+# Changelog
+
+ - **v.0.1.0** Init Version.
+
 ## How to install (steps)
 
 ### 1. Install using Composer
