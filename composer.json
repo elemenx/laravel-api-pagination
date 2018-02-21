@@ -1,0 +1,38 @@
+{
+    "name": "elemenx/laravel-api-pagination",
+    "type": "library",
+    "version": "0.1.0",
+    "description": "API Pagination For Laravel & Lumen",
+    "keywords": [
+        "lumen",
+        "laravel",
+        "api",
+        "pagination",
+        "elemenx"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "BranchZero Sun",
+            "email": "branchzero@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ElemenX\\ApiPagination\\": "src"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ElemenX\\ApiPagination\\PaginationServiceProvider"
+            ]
+        }
+    }
+}
