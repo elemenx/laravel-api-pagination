@@ -5,7 +5,8 @@ Inspired By Illuminate Pagination, This Package Used For Api Pagination (by limi
 
 # Changelog
 
- - **v.0.1.0** Init Version.
+ - **0.1.1** Fix Unresolved Dependency.
+ - **0.1.0** Init Version.
 
 ## How to install (steps)
 
