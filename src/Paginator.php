@@ -15,24 +15,24 @@ class Paginator extends AbstractPaginator implements Arrayable, ArrayAccess, Cou
     /**
      * Create a new paginator instance.
      *
-     * @param  mixed     $items
+     * @param  mixed     $results
      * @param  int|0     $total
      * @param  int|null  $currentLimit
      * @param  int|null  $currentOffset
      * @param  array     $options (offsetName, limitName)
      * @return void
      */
-    public function __construct($items, $total = 0, $currentLimit = null, $currentOffset = null, array $options = [])
+    public function __construct($results, $total = 0, $limit = null, $offset = null, array $options = [])
     {
         foreach ($options as $key => $value) {
             $this->{$key} = $value;
         }
 
         $this->total = $total;
-        $this->limit = $this->setCurrentLimit($currentLimit);
-        $this->offset = $this->setCurrentOffset($currentOffset);
+        $this->limit = $this->setCurrentLimit($limit);
+        $this->offset = $this->setCurrentOffset($offset);
 
-        $this->setItems($items);
+        $this->setItems($results);
     }
 
     /**

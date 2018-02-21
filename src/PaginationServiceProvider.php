@@ -20,7 +20,7 @@ class PaginationServiceProvider extends ServiceProvider
                 return (int) $limit;
             }
 
-            return null;
+            return 20;
         });
 
         Paginator::currentOffsetResolver(function ($offsetName = 'offset') {
