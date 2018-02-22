@@ -3,10 +3,11 @@
 namespace ElemenX\ApiPagination;
 
 use Illuminate\Container\Container;
+use Illuminate\Database\Eloquent\Builder;
 
 trait Paginatable
 {
-    public function apiPaginate($limit = null, $offset = null, $columns = ['*'], $limitName = 'limit', $offsetName = 'offset')
+    public function scopeApiPaginate(Builder $query, $limit = null, $offset = null, $columns = ['*'], $limitName = 'limit', $offsetName = 'offset')
     {
         $limit = $limit ?: Paginator::resolveCurrentLimit($limitName);
         $offset = $offset ?: Paginator::resolveCurrentOffset($offsetName);
