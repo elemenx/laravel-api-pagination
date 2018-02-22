@@ -12,9 +12,9 @@ trait Paginatable
         $limit = $limit ?: Paginator::resolveCurrentLimit($limitName);
         $offset = $offset ?: Paginator::resolveCurrentOffset($offsetName);
 
-        $results = ($total = $this->toBase()->getCountForPagination())
-            ? $this->skip($offset)->take($limit)->get($columns)
-            : $this->model->newCollection();
+        $results = ($total = $query->toBase()->getCountForPagination())
+            ? $query->skip($offset)->take($limit)->get($columns)
+            : $query->model->newCollection();
 
         return Container::getInstance()->makeWith(Paginator::class, compact(
             'results',
