@@ -16,7 +16,7 @@ Inspired By Illuminate Pagination, This Package Used For Api Pagination (by limi
 ### 1. Install using Composer
 
 ```
-composer require "elemenx/api-pagination"
+composer require "elemenx/laravel-api-pagination"
 ```
 
 ### 2. Required changes in bootstrap/app.php (If using Lumen)
