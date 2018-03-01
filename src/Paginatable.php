@@ -4,6 +4,7 @@ namespace ElemenX\ApiPagination;
 
 use Illuminate\Container\Container;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 
 trait Paginatable
 {
@@ -14,7 +15,7 @@ trait Paginatable
 
         $results = ($total = $query->toBase()->getCountForPagination())
             ? $query->skip($offset)->take($limit)->get($columns)
-            : $query->model->newCollection();
+            : new Collection([]);
 
         return Container::getInstance()->makeWith(Paginator::class, compact(
             'results',
